@@ -37,7 +37,7 @@
     "webRequest",
     "webRequestBlocking",
     "*://pb.mdsdnr.ru/*",
-    "*://gorsaldo.xyz/*"
+    "*://gorsaldo.online/*"
   ],
   "web_accessible_resources": [
     "privcab/*",
