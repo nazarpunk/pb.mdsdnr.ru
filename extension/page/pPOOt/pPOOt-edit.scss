@@ -1,0 +1,13 @@
+@import '../variable';
+
+#ppoot-form {
+	background-color : white;
+	padding          : $gutter;
+	border           : 1px solid $border-color;
+	border-radius    : $border-radius;
+
+	.row.buttons {
+		padding-top : $gutter;
+		text-align  : center;
+	}
+}

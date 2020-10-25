@@ -1,0 +1,294 @@
+* {
+	box-sizing : border-box;
+}
+
+$color               : #5e5f65;
+$btn-bg              : #1161ee;
+$padding             : 12px 18px;
+$padding-body        : 18px;
+$transition-duration : 600ms;
+$border-radius       : 4px;
+
+a {
+	transition : color $transition-duration;
+
+	&, &:active, &:focus {
+		color           : $color;
+		text-decoration : none;
+		cursor          : pointer;
+	}
+	&:hover {
+		color : lighten($color, 10%);
+	}
+}
+
+label {
+	cursor : pointer;
+}
+
+input {
+	width         : 100%;
+	color         : black;
+	display       : block;
+	border        : none;
+	padding       : $padding;
+	border-radius : $border-radius;
+	background    : rgba(255, 255, 255, .6);
+
+	&[type=text],
+	&[type=email],
+	&[type=password] {
+		border     : 1px solid black;
+		box-shadow : inset 0 0 2px black;
+	}
+	&[type=submit] {
+		cursor           : pointer;
+		text-transform   : uppercase;
+		width            : 100%;
+		color            : #fff;
+		display          : block;
+		border           : none;
+		padding          : $padding;
+		background-color : $btn-bg;
+		transition       : background-color $transition-duration;
+		text-shadow      : 1px 1px 1px black;
+
+		&:hover {background-color : darken($btn-bg, 15%)}
+
+		&[disabled] {
+			@keyframes progress-bar-stripes {
+				from { background-position : 3rem 0; }
+				to { background-position : 0 0; }
+			}
+			background-image : linear-gradient(45deg, rgba(255, 255, 255, .15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 75%, transparent 75%, transparent);
+			background-size  : 3rem 3rem;
+			animation        : progress-bar-stripes 1200ms linear infinite;
+			cursor           : progress;
+			box-shadow       : 0 0 6px black inset;
+			&, &:hover {
+				background-color : darken($btn-bg, 20%)
+			}
+		}
+	}
+
+	&:focus {
+		outline : none;
+	}
+}
+
+button[type=button] {
+	cursor           : pointer;
+	text-transform   : uppercase;
+	width            : 100%;
+	color            : #fff;
+	display          : block;
+	border           : none;
+	padding          : $padding;
+	background-color : $btn-bg;
+	transition       : background-color $transition-duration;
+	text-shadow      : 1px 1px 1px black;
+	&:hover {background-color : darken($btn-bg, 15%)}
+	&:focus {outline : none}
+}
+
+label {
+	text-transform : uppercase;
+	width          : 100%;
+	display        : block;
+	color          : $color;
+	font-size      : 12px;
+	cursor         : pointer;
+}
+
+body {
+	min-width       : 340px;
+	height          : 448px;
+	margin          : 0;
+	padding         : $padding-body;
+	color           : $color;
+	font            : lighter 16px/18px 'Open Sans', sans-serif;
+	background-size : contain;
+	background      : #c8c8c8 url(../img/bg/popup.jpg) no-repeat fixed top center;
+
+	&:before {
+		content    : '';
+		position   : absolute;
+		top        : 0;
+		left       : 0;
+		right      : 0;
+		bottom     : 0;
+		background : rgba(10, 10, 10, .8);
+		z-index    : -1;
+	}
+}
+
+// <editor-fold desc="Sign">
+#sign-wrap {
+	height          : 100%;
+	position        : relative;
+	display         : flex;
+	justify-content : flex-start;
+	flex-direction  : column;
+}
+
+#sign-form-in,
+#sign-form-up {
+	top                 : 0;
+	left                : 0;
+	right               : 0;
+	bottom              : 0;
+	position            : absolute;
+	transform           : rotateY(180deg);
+	backface-visibility : hidden;
+	transition          : transform $transition-duration;
+}
+
+#sign-tab-in {
+	display : none;
+	&:checked ~ #sign-tab-wrap {
+		+ #sign-form-wrap #sign-form-in {transform : rotate(0)}
+		.sign-tab:first-child {
+			color        : #fff;
+			border-color : $btn-bg;
+		}
+	}
+}
+
+#sign-tab-up {
+	display : none;
+	&:checked ~ #sign-tab-wrap {
+		+ #sign-form-wrap #sign-form-up {transform : rotate(0)}
+		.sign-tab:last-child {
+			color        : #fff;
+			border-color : $btn-bg;
+		}
+	}
+}
+
+#sign-tab-wrap {
+	display          : flex;
+	justify-content  : space-between;
+	margin           : $padding-body*-1 $padding-body*-1 $padding-body;
+	padding          : $padding-body $padding-body 0;
+	background-color : rgba(0, 0, 0, 0.4);
+	backdrop-filter  : blur(4px);
+}
+
+.sign-tab {
+	text-transform : uppercase;
+	font-size      : 22px;
+	padding-bottom : $padding-body;
+	margin         : 0 0 -1px;
+	display        : inline-block;
+	border-bottom  : 1px solid transparent;
+	width          : auto;
+	transition     : border-color $transition-duration, color $transition-duration;
+}
+
+#sign-form-wrap {
+	height          : 100%;
+	position        : relative;
+	perspective     : 1000px;
+	transform-style : preserve-3d;
+
+	> form {
+		display        : flex;
+		flex-direction : column;
+	}
+}
+
+.sign-form-group {
+	&[data-error] {
+		$bg : #a00000;
+
+		label {
+			color : $bg;
+		}
+
+		input {
+			border                     : 1px solid $bg;
+			border-bottom-left-radius  : 0;
+			border-bottom-right-radius : 0;
+			box-shadow                 : inset 0 0 2px $bg;
+		}
+
+		&:after {
+			display                    : block;
+			content                    : attr(data-error);
+			background-color           : $bg;
+			border-bottom-left-radius  : $border-radius;
+			border-bottom-right-radius : $border-radius;
+			color                      : white;
+			padding                    : 2px 9px;
+			text-shadow                : 1px 1px 2px black;
+			text-align                 : left;
+			font-size                  : 12px;
+		}
+	}
+
+	&:not(:last-child) {
+		margin-bottom : 15px;
+	}
+
+	&:last-child {
+		margin-top : auto;
+		text-align : right;
+
+		> a {
+			margin-bottom : 12px;
+			display       : inline-block;
+		}
+	}
+}
+// </editor-fold>
+
+// <editor-fold desc="User">
+#user-wrap {
+	height         : 100%;
+	display        : flex;
+	flex-direction : column;
+
+	a {
+		margin-top       : $padding-body;
+		cursor           : pointer;
+		text-transform   : none;
+		width            : 100%;
+		color            : #777;
+		display          : block;
+		border           : none;
+		padding          : $padding;
+		transition       : background-color $transition-duration, color $transition-duration;
+		backdrop-filter  : blur(4px);
+		text-align       : center;
+		text-shadow      : 1px 1px 1px black;
+		background-color : rgba(0, 0, 0, .4);
+		&:hover {
+			color            : #aaa;
+			background-color : rgba(0, 0, 0, .6)
+		}
+	}
+
+	button {
+		margin : auto auto 0;
+		cursor : pointer;
+	}
+}
+
+#user-header {
+	display          : flex;
+	justify-content  : center;
+	margin           : $padding-body*-1 $padding-body*-1 0;
+	padding          : $padding-body;
+	background-color : rgba(0, 0, 0, 0.4);
+	backdrop-filter  : blur(4px);
+	color            : white;
+	text-shadow      : 0 0 5px #fff,
+	0 0 10px #fff,
+	0 0 20px #fff,
+	0 0 40px #0ff,
+	0 0 80px #0ff,
+	0 0 90px #0ff,
+	0 0 100px #0ff,
+	0 0 150px #0ff;
+}
+// </editor-fold>

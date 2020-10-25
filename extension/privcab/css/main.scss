@@ -1,0 +1,66 @@
+@import '../../page/_variable';
+
+div.flash-error {
+	padding       : .8em;
+	margin-bottom : 1em;
+	background    : #FBE3E4;
+	color         : #8a1f11;
+	border        : 2px solid #FBC2C4;
+	a {color : #8a1f11}
+}
+div.flash-notice {
+	padding       : .8em;
+	margin-bottom : 1em;
+	background    : #FFF6BF;
+	color         : #514721;
+	border        : 2px solid #FFD324;
+	a {color : #514721}
+}
+div.flash-success {
+	padding       : .8em;
+	margin-bottom : 1em;
+	background    : #E6EFC2;
+	color         : #264409;
+	border        : 2px solid #C6D880;
+	a {color : #264409}
+}
+
+// -----------------------------------
+.sidebar2 {
+	max-width : $content-width;
+	margin    : 0 auto;
+}
+
+.portlet-decoration {display : none}
+.operations {
+	display         : flex;
+	list-style-type : none;
+	margin          : 0;
+	padding         : 0;
+
+	li {
+		padding-bottom : 0;
+		border         : 0;
+		a {
+			display          : block;
+			padding          : 8px 16px 8px 16px;
+			line-height      : 15px;
+			text-decoration  : none;
+			border-radius    : $border-radius;
+
+			&, &:visited {
+				color : #EEE;
+			}
+			background-color : #1E90FF;
+			&:hover {background-color : #80CFFF;}
+		}
+
+		+ li {margin-left : $gutter}
+	}
+}
+
+@media print {
+	button, .breadcrumbs, #header, #wrapper, #sidebar, #portlet-title, #portlet-content, #mainmenu, #footer {
+		display : none;
+	}
+}

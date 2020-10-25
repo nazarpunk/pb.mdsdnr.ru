@@ -1,0 +1,1312 @@
+.gtd {
+    width: 180mm;
+    height: 260mm;
+    margin-left: 10mm;
+/ / overflow: hidden;
+/ / background-image: url('../images/gtd.png');
+/ / background-repeat: no-repeat;
+/ / background-size: 180 mm;
+    margin-bottom: 60px;
+    /*background-color:#ddd;*/
+}
+
+.gtd2 {
+    width: 185mm;
+    height: 210mm;
+    margin-left: 10mm;
+/ / overflow: hidden;
+/ / background-image: url('../images/gtd2.png');
+/ / background-repeat: no-repeat;
+/ / background-size: 160 mm;
+    /*background-color:#ddd;*/
+}
+
+.back {
+    position: absolute;
+    /*    z-index: 0;*/
+}
+
+.front {
+    /*    z-index:1;*/
+    font-weight: bold;
+    /*    position: absolute;*/
+    overflow: hidden;
+}
+
+#CC_02 {
+    position: absolute;
+    width: 76mm;
+    height: 20mm;
+    margin-left: 20mm;
+    margin-top: 11mm;
+}
+
+#CC_02_okpo {
+    position: absolute;
+    width: 27mm;
+    height: 5mm;
+    margin-left: 69mm;
+    margin-top: 8mm;
+}
+
+#CC_08 {
+    position: absolute;
+    width: 80mm;
+    height: 20mm;
+    margin-left: 17mm;
+    margin-top: 32mm;
+}
+
+#CC_08_okpo {
+    position: absolute;
+    width: 27mm;
+    height: 5mm;
+    margin-left: 69mm;
+    margin-top: 28mm;
+}
+
+#CC_14 {
+    position: absolute;
+    width: 80mm;
+    height: 20mm;
+    margin-left: 17mm;
+    margin-top: 55mm;
+}
+
+#CC_14_okpo {
+    position: absolute;
+    width: 27mm;
+    height: 5mm;
+    margin-left: 69mm;
+    margin-top: 52mm;
+}
+
+#CC_18 {
+    position: absolute;
+    overflow: hidden;
+    width: 60mm;
+    height: 5mm;
+    margin-left: 17mm;
+    margin-top: 73mm;
+}
+
+#CC_21 {
+    position: absolute;
+    overflow: hidden;
+    width: 60mm;
+    height: 5mm;
+    margin-left: 17mm;
+    margin-top: 82mm;
+}
+
+#CC_25 {
+    position: absolute;
+    width: 5mm;
+    height: 5mm;
+    margin-left: 16mm;
+    margin-top: 90mm;
+}
+
+#CC_26 {
+    position: absolute;
+    width: 5mm;
+    height: 5mm;
+    margin-left: 36mm;
+    margin-top: 90mm;
+}
+
+#CC_27 {
+    position: absolute;
+    width: 5mm;
+    height: 5mm;
+    margin-left: 56mm;
+    margin-top: 90mm;
+}
+
+#CC_29 {
+    position: absolute;
+    /*font-size: 85%;*/
+    font-size: 8px;
+    width: 36mm;
+    height: 5mm;
+    margin-left: 16mm;
+    margin-top: 98mm;
+}
+
+#CD_31 {
+    position: absolute;
+    overflow: hidden;
+    width: 90mm;
+    height: 34mm;
+    margin-left: 17mm;
+    margin-top: 105mm;
+}
+
+#d1_1 {
+    position: absolute;
+    width: 7mm;
+    height: 3mm;
+    margin-left: 101mm;
+    margin-top: 11mm;
+}
+
+#d1_2 {
+    position: absolute;
+    width: 7mm;
+    height: 3mm;
+    margin-left: 110mm;
+    margin-top: 11mm;
+}
+
+#d1_3 {
+    position: absolute;
+    width: 7mm;
+    height: 3mm;
+    margin-left: 120mm;
+    margin-top: 11mm;
+}
+
+#CC_A_01 {
+    position: absolute;
+    width: 7mm;
+    height: 3mm;
+    margin-left: 128mm;
+    margin-top: 4mm;
+}
+
+#CC_09 {
+    position: absolute;
+    width: 80mm;
+    height: 12mm;
+    margin-left: 99mm;
+    margin-top: 31mm;
+}
+
+#CC_09_okpo {
+    position: absolute;
+    width: 27mm;
+    height: 5mm;
+    margin-left: 147mm;
+    margin-top: 28mm;
+}
+
+#d20_4 {
+    position: absolute;
+    width: 5mm;
+    height: 5mm;
+    margin-left: 99mm;
+    margin-top: 73mm;
+}
+
+#d20_3 {
+    position: absolute;
+    width: 63mm;
+    height: 5mm;
+    margin-left: 108mm;
+    margin-top: 73mm;
+}
+
+#d20_2 {
+    position: absolute;
+    width: 5mm;
+    height: 5mm;
+    margin-left: 174mm;
+    margin-top: 73mm;
+}
+
+#d22_1 {
+    position: absolute;
+    width: 5mm;
+    height: 5mm;
+    margin-left: 99mm;
+    margin-top: 82mm;
+}
+
+#d22_2 {
+    position: absolute;
+    width: 5mm;
+    height: 5mm;
+    margin-left: 108mm;
+    margin-top: 82mm;
+}
+
+#d23_1 {
+    position: absolute;
+    width: 5mm;
+    height: 5mm;
+    margin-left: 137mm;
+    margin-top: 82mm;
+}
+
+#d24_1 {
+    position: absolute;
+    width: 5mm;
+    height: 5mm;
+    margin-left: 159mm;
+    margin-top: 82mm;
+}
+
+#CC_28 {
+    position: absolute;
+    width: 79mm;
+    height: 15mm;
+    margin-left: 100mm;
+    margin-top: 90mm;
+    font-size: 11px;
+    font-weight: bold;
+}
+
+#CD_32 {
+    position: absolute;
+    width: 5mm;
+    height: 5mm;
+    margin-left: 110mm;
+    margin-top: 107mm;
+}
+
+#CD_33 {
+    position: absolute;
+    width: 20mm;
+    height: 5mm;
+    margin-left: 120mm;
+    margin-top: 107mm;
+}
+
+#CD_332 {
+    position: absolute;
+    width: 5mm;
+    height: 5mm;
+    margin-left: 142mm;
+    margin-top: 107mm;
+}
+
+#CD_333 {
+    position: absolute;
+    width: 5mm;
+    height: 5mm;
+    margin-left: 150mm;
+    margin-top: 107mm;
+}
+
+#CD_334 {
+    position: absolute;
+    width: 5mm;
+    height: 5mm;
+    margin-left: 159mm;
+    margin-top: 107mm;
+}
+
+#CD_335 {
+    position: absolute;
+    width: 20mm;
+    height: 5mm;
+    margin-left: 168mm;
+    margin-top: 107mm;
+}
+
+#CD_34 {
+    position: absolute;
+    width: 7mm;
+    height: 5mm;
+    margin-left: 123mm;
+    margin-top: 117mm;
+}
+
+#CD_36 {
+    position: absolute;
+    width: 7mm;
+    height: 5mm;
+    margin-left: 164mm;
+    margin-top: 117mm;
+}
+
+#CD_37 {
+    position: absolute;
+    width: 19mm;
+    height: 5mm;
+    margin-left: 121mm;
+    margin-top: 124mm;
+}
+
+#CD_37_2 {
+    position: absolute;
+    width: 9mm;
+    height: 5mm;
+    margin-left: 125mm;
+    margin-top: 124mm;
+}
+
+#CD_37_3 {
+    position: absolute;
+    width: 9mm;
+    height: 5mm;
+    margin-left: 131mm;
+    margin-top: 124mm;
+}
+
+#CD_38 {
+    position: absolute;
+    width: 7mm;
+    height: 5mm;
+    margin-left: 147mm;
+    margin-top: 124mm;
+}
+
+#CD_41 {
+    position: absolute;
+    width: 25mm;
+    height: 5mm;
+    margin-left: 120mm;
+    margin-top: 138mm;
+}
+
+#CD_42 {
+    position: absolute;
+    width: 18mm;
+    height: 5mm;
+    margin-left: 147mm;
+    margin-top: 138mm;
+}
+
+#CD_44 {
+    position: absolute;
+    overflow: hidden;
+    width: 101mm;
+    height: 17mm;
+    margin-left: 17mm;
+    margin-top: 141mm;
+}
+
+#CD_44 td {
+    padding: 0px;
+}
+
+#CD_46 {
+    position: absolute;
+    width: 18mm;
+    height: 5mm;
+    margin-left: 147mm;
+    margin-top: 155mm;
+}
+
+#CD_03_01 {
+    position: absolute;
+    width: 14mm;
+    height: 5mm;
+    margin-left: 99mm;
+    margin-top: 18mm;
+}
+
+#CD_04_01 {
+    position: absolute;
+    width: 12mm;
+    height: 5mm;
+    margin-left: 115mm;
+    margin-top: 18mm;
+}
+
+#CD_05_01 {
+    position: absolute;
+    width: 14mm;
+    height: 5mm;
+    margin-left: 99mm;
+    margin-top: 24mm;
+}
+
+#CD_06_01 {
+    position: absolute;
+    width: 12mm;
+    height: 5mm;
+    margin-left: 115mm;
+    margin-top: 24mm;
+}
+
+#CC_07_01 {
+    position: absolute;
+    width: 24mm;
+    height: 5mm;
+    margin-left: 133mm;
+    margin-top: 24mm;
+}
+
+#CD_11 {
+    position: absolute;
+    width: 24mm;
+    height: 5mm;
+    margin-left: 119mm;
+    margin-top: 48mm;
+}
+
+#CD_12 {
+    position: absolute;
+    width: 24mm;
+    height: 5mm;
+    margin-left: 135mm;
+    margin-top: 48mm;
+}
+
+#CC_15 {
+    position: absolute;
+    width: 37mm;
+    height: 5mm;
+    margin-left: 99mm;
+    margin-top: 57mm;
+}
+
+#CC_15_2 {
+    position: absolute;
+    width: 5mm;
+    height: 5mm;
+    margin-left: 141mm;
+    margin-top: 57mm;
+}
+
+#CC_16 {
+    position: absolute;
+    width: 24mm;
+    height: 5mm;
+    margin-left: 99mm;
+    margin-top: 65mm;
+}
+
+#CC_17 {
+    position: absolute;
+    width: 5mm;
+    height: 5mm;
+    margin-left: 164mm;
+    margin-top: 57mm;
+}
+
+#CC_172 {
+    position: absolute;
+    width: 5mm;
+    height: 5mm;
+    margin-left: 138mm;
+    margin-top: 65mm;
+}
+
+#CC_182 {
+    position: absolute;
+    width: 5mm;
+    height: 5mm;
+    margin-left: 82mm;
+    margin-top: 73mm;
+}
+
+#CC_212 {
+    position: absolute;
+    width: 5mm;
+    height: 5mm;
+    margin-left: 91mm;
+    margin-top: 82mm;
+}
+
+#CD_19 {
+    position: absolute;
+    width: 5mm;
+    height: 5mm;
+    margin-left: 91mm;
+    margin-top: 73mm;
+}
+
+#CD_30 {
+    position: absolute;
+    /*font-size: 85%;*/
+    font-size: 8px;
+    width: 42mm;
+    height: 5mm;
+    margin-left: 55mm;
+    margin-top: 98mm;
+}
+
+#CD_35 {
+    position: absolute;
+    width: 24mm;
+    height: 5mm;
+    margin-left: 142mm;
+    margin-top: 117mm;
+}
+
+#CD_39 {
+    position: absolute;
+    width: 24mm;
+    height: 5mm;
+    margin-left: 164mm;
+    margin-top: 124mm;
+}
+
+#CD_40 {
+    position: absolute;
+    width: 24mm;
+    height: 5mm;
+    margin-left: 121mm;
+    margin-top: 130mm;
+}
+
+#CD_45 {
+    position: absolute;
+    width: 24mm;
+    height: 5mm;
+    margin-left: 156mm;
+    margin-top: 147mm;
+}
+
+#CD_48 {
+    position: absolute;
+    overflow: hidden;
+    width: 80mm;
+    height: 31mm;
+    margin-left: 17mm;
+    margin-top: 164mm;
+}
+
+.str48 {
+    clear: both;
+    overflow: hidden;
+}
+
+.vid {
+    width: 8mm;
+    float: left;
+}
+
+.fnd {
+    width: 25mm;
+    float: left;
+}
+
+.stav {
+    width: 20mm;
+    float: left;
+}
+
+.sum {
+    width: 23mm;
+    float: left;
+}
+
+.sp {
+    width: 4mm;
+    float: left;
+}
+
+#CD_B {
+    position: absolute;
+    overflow: hidden;
+    width: 81mm;
+    height: 29mm;
+    margin-left: 99mm;
+    margin-top: 170mm;
+}
+
+.headt {
+    margin: 0px;
+    width: 389px;
+}
+
+.headt .sh {
+    width: 55px;
+    padding: 0px;
+}
+
+.headt .lg {
+    width: 93px;
+    padding: 0px;
+}
+
+.headt2 {
+    margin: 0px;
+    width: 760px;
+}
+
+.headt2 .sh {
+    width: 58px;
+    padding: 0px;
+}
+
+.headt2 .lg {
+    width: 174px;
+    padding: 0px;
+}
+
+.headt3 {
+    margin: 0px;
+    width: 530px;
+}
+
+.headt3 td {
+    width: 177px;
+    padding: 0px;
+}
+
+#CC_54 {
+    position: absolute;
+    width: 59mm;
+    height: 15mm;
+    margin-left: 120mm;
+    margin-top: 239mm;
+}
+
+
+#CD1_31 {
+    position: absolute;
+    overflow: hidden;
+    width: 90mm;
+    height: 34mm;
+    margin-left: 17mm;
+    margin-top: 25mm;
+}
+
+#CD2_31 {
+    position: absolute;
+    overflow: hidden;
+    width: 90mm;
+    height: 34mm;
+    margin-left: 17mm;
+    margin-top: 84mm;
+}
+
+#CD3_31 {
+    position: absolute;
+    overflow: hidden;
+    width: 90mm;
+    height: 34mm;
+    margin-left: 17mm;
+    margin-top: 140mm;
+}
+
+#CD1_32 {
+    position: absolute;
+    width: 5mm;
+    height: 5mm;
+    margin-left: 98mm;
+    margin-top: 28mm;
+}
+
+#CD2_32 {
+    position: absolute;
+    width: 5mm;
+    height: 5mm;
+    margin-left: 98mm;
+    margin-top: 84mm;
+}
+
+#CD3_32 {
+    position: absolute;
+    width: 5mm;
+    height: 5mm;
+    margin-left: 98mm;
+    margin-top: 140mm;
+}
+
+#CD1_33 {
+    position: absolute;
+    width: 20mm;
+    height: 5mm;
+    margin-left: 107mm;
+    margin-top: 28mm;
+}
+
+#CD2_33 {
+    position: absolute;
+    width: 20mm;
+    height: 5mm;
+    margin-left: 107mm;
+    margin-top: 84mm;
+}
+
+#CD3_33 {
+    position: absolute;
+    width: 20mm;
+    height: 5mm;
+    margin-left: 107mm;
+    margin-top: 140mm;
+}
+
+#CD1_332 {
+    position: absolute;
+    width: 20mm;
+    height: 5mm;
+    margin-left: 126mm;
+    margin-top: 28mm;
+}
+
+#CD2_332 {
+    position: absolute;
+    width: 20mm;
+    height: 5mm;
+    margin-left: 126mm;
+    margin-top: 84mm;
+}
+
+#CD3_332 {
+    position: absolute;
+    width: 20mm;
+    height: 5mm;
+    margin-left: 126mm;
+    margin-top: 140mm;
+}
+
+#CD1_333 {
+    position: absolute;
+    width: 20mm;
+    height: 5mm;
+    margin-left: 134mm;
+    margin-top: 28mm;
+}
+
+#CD2_333 {
+    position: absolute;
+    width: 20mm;
+    height: 5mm;
+    margin-left: 134mm;
+    margin-top: 84mm;
+}
+
+#CD3_333 {
+    position: absolute;
+    width: 20mm;
+    height: 5mm;
+    margin-left: 134mm;
+    margin-top: 140mm;
+}
+
+#CD1_334 {
+    position: absolute;
+    width: 20mm;
+    height: 5mm;
+    margin-left: 152mm;
+    margin-top: 28mm;
+}
+
+#CD2_334 {
+    position: absolute;
+    width: 20mm;
+    height: 5mm;
+    margin-left: 152mm;
+    margin-top: 84mm;
+}
+
+#CD3_334 {
+    position: absolute;
+    width: 20mm;
+    height: 5mm;
+    margin-left: 152mm;
+    margin-top: 140mm;
+}
+
+#CD1_34 {
+    position: absolute;
+    width: 7mm;
+    height: 5mm;
+    margin-left: 109mm;
+    margin-top: 38mm;
+}
+
+#CD2_34 {
+    position: absolute;
+    width: 7mm;
+    height: 5mm;
+    margin-left: 109mm;
+    margin-top: 93mm;
+}
+
+#CD3_34 {
+    position: absolute;
+    width: 7mm;
+    height: 5mm;
+    margin-left: 109mm;
+    margin-top: 148mm;
+}
+
+#CD1_35 {
+    position: absolute;
+    width: 24mm;
+    height: 5mm;
+    margin-left: 126mm;
+    margin-top: 38mm;
+}
+
+#CD2_35 {
+    position: absolute;
+    width: 24mm;
+    height: 5mm;
+    margin-left: 126mm;
+    margin-top: 93mm;
+}
+
+#CD3_35 {
+    position: absolute;
+    width: 24mm;
+    height: 5mm;
+    margin-left: 126mm;
+    margin-top: 148mm;
+}
+
+#CD1_36 {
+    position: absolute;
+    width: 7mm;
+    height: 5mm;
+    margin-left: 150mm;
+    margin-top: 38mm;
+}
+
+#CD2_36 {
+    position: absolute;
+    width: 7mm;
+    height: 5mm;
+    margin-left: 150mm;
+    margin-top: 93mm;
+}
+
+#CD3_36 {
+    position: absolute;
+    width: 7mm;
+    height: 5mm;
+    margin-left: 150mm;
+    margin-top: 148mm;
+}
+
+#CD1_37 {
+    position: absolute;
+    width: 5mm;
+    height: 5mm;
+    margin-left: 107mm;
+    margin-top: 45mm;
+}
+
+#CD2_37 {
+    position: absolute;
+    width: 5mm;
+    height: 5mm;
+    margin-left: 107mm;
+    margin-top: 100mm;
+}
+
+#CD3_37 {
+    position: absolute;
+    width: 5mm;
+    height: 5mm;
+    margin-left: 107mm;
+    margin-top: 157mm;
+}
+
+#CD1_37_2 {
+    position: absolute;
+    width: 5mm;
+    height: 5mm;
+    margin-left: 112mm;
+    margin-top: 45mm;
+}
+
+#CD2_37_2 {
+    position: absolute;
+    width: 5mm;
+    height: 5mm;
+    margin-left: 112mm;
+    margin-top: 100mm;
+}
+
+#CD3_37_2 {
+    position: absolute;
+    width: 5mm;
+    height: 5mm;
+    margin-left: 112mm;
+    margin-top: 157mm;
+}
+
+#CD1_37_3 {
+    position: absolute;
+    width: 5mm;
+    height: 5mm;
+    margin-left: 119mm;
+    margin-top: 45mm;
+}
+
+#CD2_37_3 {
+    position: absolute;
+    width: 5mm;
+    height: 5mm;
+    margin-left: 119mm;
+    margin-top: 100mm;
+}
+
+#CD3_37_3 {
+    position: absolute;
+    width: 5mm;
+    height: 5mm;
+    margin-left: 119mm;
+    margin-top: 157mm;
+}
+
+#CD1_38 {
+    position: absolute;
+    width: 7mm;
+    height: 5mm;
+    margin-left: 131mm;
+    margin-top: 45mm;
+}
+
+#CD2_38 {
+    position: absolute;
+    width: 7mm;
+    height: 5mm;
+    margin-left: 131mm;
+    margin-top: 100mm;
+}
+
+#CD3_38 {
+    position: absolute;
+    width: 7mm;
+    height: 5mm;
+    margin-left: 131mm;
+    margin-top: 157mm;
+}
+
+#CD1_39 {
+    position: absolute;
+    width: 24mm;
+    height: 5mm;
+    margin-left: 151mm;
+    margin-top: 45mm;
+}
+
+#CD2_39 {
+    position: absolute;
+    width: 24mm;
+    height: 5mm;
+    margin-left: 151mm;
+    margin-top: 100mm;
+}
+
+#CD3_39 {
+    position: absolute;
+    width: 24mm;
+    height: 5mm;
+    margin-left: 151mm;
+    margin-top: 157mm;
+}
+
+#CD1_40 {
+    position: absolute;
+    width: 24mm;
+    height: 5mm;
+    margin-left: 107mm;
+    margin-top: 52mm;
+}
+
+#CD2_40 {
+    position: absolute;
+    width: 24mm;
+    height: 5mm;
+    margin-left: 107mm;
+    margin-top: 107mm;
+}
+
+#CD3_40 {
+    position: absolute;
+    width: 24mm;
+    height: 5mm;
+    margin-left: 107mm;
+    margin-top: 163mm;
+}
+
+#CD1_41 {
+    position: absolute;
+    width: 25mm;
+    height: 5mm;
+    margin-left: 107mm;
+    margin-top: 59mm;
+}
+
+#CD2_41 {
+    position: absolute;
+    width: 25mm;
+    height: 5mm;
+    margin-left: 107mm;
+    margin-top: 115mm;
+}
+
+#CD3_41 {
+    position: absolute;
+    width: 25mm;
+    height: 5mm;
+    margin-left: 107mm;
+    margin-top: 171mm;
+}
+
+#CD1_42 {
+    position: absolute;
+    width: 18mm;
+    height: 5mm;
+    margin-left: 131mm;
+    margin-top: 59mm;
+}
+
+#CD2_42 {
+    position: absolute;
+    width: 18mm;
+    height: 5mm;
+    margin-left: 131mm;
+    margin-top: 115mm;
+}
+
+#CD3_42 {
+    position: absolute;
+    width: 18mm;
+    height: 5mm;
+    margin-left: 131mm;
+    margin-top: 171mm;
+}
+
+#CD1_44 {
+    position: absolute;
+    overflow: hidden;
+    width: 81mm;
+    height: 19mm;
+    margin-left: 15mm;
+    margin-top: 60mm;
+}
+
+#CD1_44 td {
+    padding: 0px;
+}
+
+#CD2_44 {
+    position: absolute;
+    overflow: hidden;
+    width: 81mm;
+    height: 19mm;
+    margin-left: 15mm;
+    margin-top: 116mm;
+}
+
+#CD2_44 td {
+    padding: 0px;
+}
+
+#CD3_44 {
+    position: absolute;
+    overflow: hidden;
+    width: 81mm;
+    height: 19mm;
+    margin-left: 15mm;
+    margin-top: 174mm;
+}
+
+#CD3_44 td {
+    padding: 0px;
+}
+
+#CD1_45 {
+    position: absolute;
+    width: 24mm;
+    height: 5mm;
+    margin-left: 140mm;
+    margin-top: 68mm;
+}
+
+#CD2_45 {
+    position: absolute;
+    width: 24mm;
+    height: 5mm;
+    margin-left: 140mm;
+    margin-top: 124mm;
+}
+
+#CD3_45 {
+    position: absolute;
+    width: 24mm;
+    height: 5mm;
+    margin-left: 140mm;
+    margin-top: 180mm;
+}
+
+#CD1_46 {
+    position: absolute;
+    width: 18mm;
+    height: 5mm;
+    margin-left: 132mm;
+    margin-top: 76mm;
+}
+
+#CD2_46 {
+    position: absolute;
+    width: 18mm;
+    height: 5mm;
+    margin-left: 132mm;
+    margin-top: 132mm;
+}
+
+#CD3_46 {
+    position: absolute;
+    width: 18mm;
+    height: 5mm;
+    margin-left: 132mm;
+    margin-top: 188mm;
+}
+
+#CD1_48 {
+    position: absolute;
+    overflow: hidden;
+    width: 72mm;
+    height: 24mm;
+    margin-left: 15mm;
+    margin-top: 198mm;
+}
+
+#CD2_48 {
+    position: absolute;
+    overflow: hidden;
+    width: 72mm;
+    height: 24mm;
+    margin-left: 88mm;
+    margin-top: 198mm;
+}
+
+#CD3_48 {
+    position: absolute;
+    overflow: hidden;
+    width: 72mm;
+    height: 24mm;
+    margin-left: 15mm;
+    margin-top: 231mm;
+}
+
+.str482 {
+    clear: both;
+    overflow: hidden;
+}
+
+.vid2 {
+    width: 8mm;
+    float: left;
+}
+
+.fnd2 {
+    width: 20mm;
+    float: left;
+}
+
+.stav2 {
+    width: 20mm;
+    float: left;
+}
+
+.sum2 {
+    width: 20mm;
+    float: left;
+}
+
+.sp2 {
+    width: 4mm;
+    float: left;
+}
+
+#CD_03_02 {
+    position: absolute;
+    width: 5mm;
+    height: 5mm;
+    margin-left: 108mm;
+    margin-top: 18mm;
+}
+
+#CD_48_SUM {
+    position: absolute;
+    width: 21mm;
+    height: 5mm;
+    margin-left: 71mm;
+    margin-top: 196mm;
+}
+
+#CD2_48_SUM1 {
+    position: absolute;
+    width: 21mm;
+    height: 5mm;
+    margin-left: 63mm;
+    margin-top: 223mm;
+}
+
+#CD2_48_SUM2 {
+    position: absolute;
+    width: 21mm;
+    height: 5mm;
+    margin-left: 136mm;
+    margin-top: 223mm;
+}
+
+#CD2_48_SUM3 {
+    position: absolute;
+    width: 21mm;
+    height: 5mm;
+    margin-left: 63mm;
+    margin-top: 259mm;
+}
+
+#CC2_02 {
+    position: absolute;
+    width: 76mm;
+    height: 20mm;
+    margin-left: 20mm;
+    margin-top: 11mm;
+}
+
+#CC2_02_okpo {
+    position: absolute;
+    width: 27mm;
+    height: 5mm;
+    margin-left: 63mm;
+    margin-top: 8mm;
+}
+
+#d21_1 {
+    position: absolute;
+    width: 7mm;
+    height: 3mm;
+    margin-left: 90mm;
+    margin-top: 11mm;
+}
+
+#d21_2 {
+    position: absolute;
+    width: 7mm;
+    height: 3mm;
+    margin-left: 97mm;
+    margin-top: 11mm;
+}
+
+#d21_3 {
+    position: absolute;
+    width: 7mm;
+    height: 3mm;
+    margin-left: 109mm;
+    margin-top: 11mm;
+}
+
+#CC2_A_01 {
+    position: absolute;
+    width: 7mm;
+    height: 3mm;
+    margin-left: 114mm;
+    margin-top: 4mm;
+}
+
+#CD2_03_01 {
+    position: absolute;
+    width: 14mm;
+    height: 5mm;
+    margin-left: 90mm;
+    margin-top: 18mm;
+}
+
+#CD2_03_02 {
+    position: absolute;
+    width: 5mm;
+    height: 5mm;
+    margin-left: 97mm;
+    margin-top: 18mm;
+}
+
+@media print {
+
+} 

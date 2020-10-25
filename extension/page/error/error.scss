@@ -1,0 +1,39 @@
+#body {
+	align-items     : center;
+	justify-content : center;
+	min-height      : 100%;
+}
+
+h2 {
+	margin-top : 0;
+}
+
+.wrapper {
+	margin-top      : auto;
+	margin-bottom   : auto;
+	display         : flex;
+	align-items     : center;
+	justify-content : center;
+}
+
+.content-wrapper {
+	padding          : 40px;
+	background-color : rgba(0, 0, 0, 0.8);
+	background-image : repeating-linear-gradient(45deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.05) 25%, transparent 25%, transparent 50%);
+	color            : white;
+	border-radius    : 12px;
+	box-shadow       : 12px 12px 8px #000000cc;
+	background-size  : 40px 40px;
+	border           : 1px solid #636363;
+}
+
+.btn-default {
+	margin-top       : 60px;
+	box-shadow       : 0 0 0 1px #ebebeb inset, 0 0 0 2px rgba(255, 255, 255, 0.15) inset, 0 8px 0 0 #adadad, 0 8px 0 1px rgba(0, 0, 0, 0.4), 0 8px 8px 1px rgba(0, 0, 0, 0.5);
+	background-color : #fff;
+	transition       : all .08s linear;
+	position         : relative;
+	outline          : medium none;
+	border           : 0;
+	margin-right     : 10px;
+}

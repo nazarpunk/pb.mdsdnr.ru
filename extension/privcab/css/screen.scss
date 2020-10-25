@@ -1,0 +1,112 @@
+@import '../../page/variable';
+
+@media screen {
+	html {height : 100%}
+	body {
+		display        : flex;
+		flex-direction : column;
+		background     : #fff url(../images/bg/bg-white.png) fixed top left;
+	}
+
+	*:focus {
+		outline : none !important;
+	}
+
+	.content-wrapper {
+		padding : $gutter;
+	}
+
+	.main-sidebar {
+		background : url(../images/bg/bg-dark.jpeg) top left fixed;
+
+		&:after {
+			background : url(../images/owl/sidebar.gif) top left no-repeat;
+		}
+	}
+
+	[data-subpage=view],
+	[data-subpage=edit] {
+		.span-19 {
+			max-width : $content-width !important;
+			margin    : 0 auto;
+		}
+	}
+
+	h1, h2, h3 {
+		&[style='color:red'], &[style='color:green'] {
+			font-size     : 14px;
+			padding       : $gutter;
+			color         : inherit !important;
+			border        : 1px solid $border-color;
+			border-radius : $border-radius;
+			background    : white;
+		}
+	}
+
+	.table-scroll-wrap {
+		overflow-x       : auto;
+		overflow-y       : hidden;
+		width            : 100%;
+		margin-top       : $gutter;
+		border           : 1px solid $border-color;
+		border-radius    : $border-radius;
+		background-color : white;
+
+		&, > div {
+			&::-webkit-scrollbar {
+				width : 12px;
+			}
+			&::-webkit-scrollbar-track {
+				background : transparent;
+			}
+			&::-webkit-scrollbar-thumb {
+				cursor           : pointer;
+				border-radius    : $border-radius;
+				background-color : gray;
+			}
+		}
+	}
+
+	::-webkit-file-upload-button {
+		&:focus {outline : none}
+	}
+
+	.xml-upload-form {
+		display         : flex;
+		margin-bottom   : $gutter;
+		padding         : 6px;
+		border          : 1px solid $border-color;
+		border-radius   : $border-radius;
+		background      : rgba(255, 255, 255, 0.4);
+		backdrop-filter : blur(4px);
+
+		[type=file] {
+			flex-grow : 1;
+			&:focus {
+				outline : none;
+			}
+		}
+
+		::-webkit-file-upload-button, [type=submit] {
+			font-size        : 12px;
+			display          : inline-block;
+			height           : 30px;
+			padding          : 0 12px;
+			cursor           : pointer;
+			transition       : all 0.2s;
+			text-align       : center;
+			text-decoration  : none;
+			color            : #FFFFFF;
+			border           : 0;
+			border-radius    : $border-radius;
+			background-color : #4eb5f1;
+			text-shadow      : 1px 1px 1px #2d2d2d;
+
+			&:hover {
+				background-color : #4095c6;
+			}
+		}
+
+		&:focus {outline : none}
+	}
+}

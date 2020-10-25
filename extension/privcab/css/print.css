@@ -1,0 +1,176 @@
+@import "screen.css";
+
+body {
+    line-height: 1.5;
+    font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+    color: #000;
+    background: none;
+    font-size: 10pt;
+}
+
+.container {
+    background: none;
+    margin: 5px;
+}
+
+hr {
+    background: #ccc;
+    color: #ccc;
+    width: 100%;
+    height: 2px;
+    margin: 2em 0;
+    padding: 0;
+    border: none;
+}
+
+hr.space {
+    background: #fff;
+    color: #fff;
+    visibility: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Helvetica Neue", Arial, "Lucida Grande", sans-serif;
+}
+
+code {
+    font: .9em "Courier New", Monaco, Courier, monospace;
+}
+
+a img {
+    border: none;
+}
+
+p img.top {
+    margin-top: 0;
+}
+
+blockquote {
+    margin: 1.5em;
+    padding: 1em;
+    font-style: italic;
+    font-size: .9em;
+}
+
+.small {
+    font-size: .9em;
+}
+
+.large {
+    font-size: 1.1em;
+}
+
+.quiet {
+    color: #999;
+}
+
+.hide {
+    display: none;
+}
+
+a:link, a:visited {
+    background: transparent;
+    font-weight: 700;
+    text-decoration: underline;
+}
+
+a:link:after, a:visited:after {
+    content: " (" attr(href) ")";
+    font-size: 90%;
+}
+
+a {
+    display: none;
+}
+
+#content {
+
+    margin-right: 125px;
+    width: 100px;
+}
+
+#page {
+    border: 0px solid white !important;
+}
+
+/*#content{height: 200mm;}*/
+
+#trans {
+    width: 92.5%;
+    margin-left: 55px;
+}
+
+#drive {
+    width: 92.5%;
+    margin-left: 55px;
+}
+
+#tovars {
+    width: 92.5%;
+    margin-left: 55px;
+}
+
+#result {
+    width: 92.5%;
+    margin-left: 55px;
+}
+
+#podpis_all {
+    width: 90%;
+    margin-left: 55px;
+}
+
+.kontur {
+    width: 92.5%;
+    margin-left: 55px;
+}
+
+#head {
+    width: 90%;
+    margin-left: 55px;
+}
+
+#content {
+    width: 87%;
+    float: right;
+}
+
+#num_ttn {
+    width: 92.5%;
+    margin-left: 55px;
+}
+
+#msg {
+    display: none;
+}
+
+@media print {
+    header {
+        color: #000;
+    }
+
+    content {
+        width: 87%;
+        float: right;
+    }
+
+    /*
+ margin-top: 2cm;
+margin-bottom: 2cm;
+margin-right: 2cm;
+margin-left: 2cm;
+
+     */
+}
+
+.main-sidebar {
+    display: none;
+}
+
+.dnone {
+    display: none;
+}
+
+
+/*.pros {display: none;}
+.f2 {  padding-top: 45px;}*/

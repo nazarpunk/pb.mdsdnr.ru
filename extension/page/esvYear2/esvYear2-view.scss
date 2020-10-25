@@ -1,0 +1,149 @@
+.tabcontents {
+	* {
+		height : auto !important;
+		float  : none !important;
+	}
+
+	.a4, .textcontent {
+		width  : auto;
+		margin : 0;
+	}
+
+	.textcontent > div {
+		width : auto !important;
+		clear : both;
+	}
+
+	#row1 {
+		display         : flex;
+		justify-content : flex-end;
+	}
+
+	#row3 {
+		display         : flex;
+		flex-direction  : row;
+		align-items     : center;
+		justify-content : space-evenly;
+
+		> div {
+			width : auto;
+		}
+	}
+	#row3_2, #row3_4 {
+		padding : 2px 4px;
+	}
+
+	#row4 {
+		margin-top     : 4px;
+		display        : flex;
+		flex-direction : row;
+		> div {
+			width      : auto;
+			text-align : center;
+		}
+	}
+
+	#row4_1 {
+		flex-grow      : 1;
+		display        : flex;
+		flex-direction : column;
+		> div {
+			width          : 100%;
+			display        : flex;
+			flex-direction : row;
+
+			> div {
+				width  : 50%;
+				margin : 0 8px;
+			}
+		}
+	}
+	#row4_2 {
+		white-space : nowrap;
+		margin      : 10px 30px 0;
+	}
+
+	#row5 {
+		display        : flex;
+		flex-direction : row;
+		margin         : 4px 0 4px;
+	}
+
+	#row6 {
+		padding : 4px;
+		border  : 1px solid black;
+	}
+
+	#row6_1, #row6_2, #row7_1, #row7_2, #row7_3, #row9_4, #row9_5, #row9_6, #row9_7, #row10_1,
+	#row10_2, #row10_3, #row10_4, #row10_5, #row11, #row12, #row14, #row17_2, #row17_3 {
+		display        : flex;
+		flex-direction : row;
+		width          : 100%;
+		margin-top     : 4px;
+
+		> div {
+			margin : 0;
+
+			&:nth-child(1) {
+				width : 50%;
+			}
+			&:nth-child(n+2) {
+				margin-right : 10px;
+				display      : flex;
+				align-items  : flex-end;
+				flex-grow    : 1;
+			}
+		}
+	}
+
+	#row8, #row15 {
+		margin-top     : 10px;
+		width          : 100%;
+		display        : flex;
+		flex-direction : column;
+
+		> div {
+			width          : 100%;
+			display        : flex;
+			flex-direction : row;
+			border         : 0;
+
+			> div {
+				width : 33%;
+			}
+		}
+	}
+
+	#row9_9 {
+		display        : flex;
+		flex-direction : row;
+		width          : auto;
+	}
+
+	#row16 {
+		display        : flex;
+		flex-direction : row;
+		white-space    : nowrap;
+		> div {width : auto}
+	}
+
+	#row11_2, #row12_2, #row14_2, #row17_3_2 {
+		width     : auto;
+		padding   : 2px 4px;
+		flex-grow : 0 !important;
+	}
+	#row14_2_wrap {
+		width  : auto;
+		margin : 6px;
+	}
+	#row14_2_2, #row14_2_3 {
+		display        : flex;
+		flex-direction : row;
+		> div:first-child {
+			min-width    : 1rem;
+			margin-right : 6px;
+			text-align   : center;
+		}
+	}
+
+}

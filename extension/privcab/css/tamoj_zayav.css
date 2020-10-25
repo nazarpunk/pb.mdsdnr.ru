@@ -1,0 +1,215 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 10.06.2015, 10:55:55
+    Author     : alex
+*/
+
+.tamoj_zayav {
+    /*width:17.7cm;*/
+    border: 1px solid black;
+    /*height: 29cm;*/
+    background-color: white;
+    font-size: 16px;
+}
+
+.allow {
+    font-weight: bold;
+    width: 100px;
+    margin-left: 10px;
+    text-align: center;
+    float: left;
+
+}
+
+.allow_mark {
+    border: 1px solid black;
+    height: 50px;
+    width: 100px;
+}
+
+.allow_check {
+    float: left;
+    margin-top: 15px;
+    margin-left: 75px;
+}
+
+.allow_v {
+    width: 15px;
+    height: 15px;
+    border: 1px solid black;
+    margin-left: 10px;
+    text-align: center;
+    FONT-WEIGHT: bold;
+}
+
+.check_text {
+    float: right;
+    margin-left: 33px;
+    margin-top: -15px;
+}
+
+.head {
+    font-weight: bold;
+    margin-left: 568px;
+    margin-top: 10px;
+    width: 220px;
+    font-size: 13px;
+}
+
+.head_zayav {
+    width: 100%;
+    font-weight: bold;
+    text-align: center;
+    font-size: 19px;
+    margin-top: 60px;
+}
+
+.body_plat {
+    width: 100%;
+    border: 1px solid black;
+}
+
+#left.allow_v {
+    float: left;
+    margin-top: 10px;
+}
+
+#right.allow_v {
+    float: left;
+    margin-left: 656px;
+    margin-top: 10px;
+
+}
+
+#face_f.check_text {
+    margin: -5px auto;
+    width: 67px;
+    float: left;
+    margin-left: 21px;
+}
+
+#face_y.check_text {
+    margin: 0 auto;
+    width: 67px;
+    float: left;
+    margin-left: 26px;
+    font-weight: bold;
+    margin-top: -5px;
+}
+
+.predpr_body {
+    width: 50%;
+    font-weight: bold;
+    float: left;
+    margin-top: 5px;
+}
+
+.predpr {
+    border-bottom: 1px solid black;
+    margin-left: 86px;
+    margin-top: -20px;
+}
+
+.okpo_body {
+    width: 50%;
+    font-weight: bold;
+    float: right;
+    margin-top: 5px;
+}
+
+.okpo {
+
+    width: 66%;
+    margin-left: 134px;
+    height: 20px;
+    margin-top: -19px;
+    font-size: 18px;
+    text-indent: 10px;
+}
+
+#d1 {
+    width: 100%;
+    margin-top: 19px;
+    margin-right: -1px;
+    border: none;
+}
+
+#d2 {
+    width: 100%;
+    margin-top: 14px;
+    margin-right: -1px;
+    border: none;
+}
+
+#d3 {
+    width: 100%;
+    margin-top: 14px;
+    margin-right: -1px;
+    border: none;
+}
+
+#kved.predpr {
+    margin-left: 156px;
+    margin-top: -15px;
+    font-size: 12px;
+}
+
+#mobile.okpo {
+    width: 80%;
+    margin-left: 78px;
+    margin-top: -20px;
+}
+
+.propusk_plat {
+    width: 100%;
+    border: 1px solid black;
+    float: left;
+}
+
+table td.left_allow {
+    text-align: center;
+    FONT-WEIGHT: bold;
+}
+
+.product_short {
+    width: 100%;
+
+    float: left;
+}
+
+#d5 {
+    width: 100%;
+    margin-top: 14px;
+    margin-right: -1px;
+    border: none;
+    height: 46px;
+}
+
+#summa.okpo {
+    width: 56%;
+    margin-left: 157px;
+    border: none;
+    border-bottom: 1px solid black;
+    margin-top: -20px;
+}
+
+#obyom.predpr {
+    margin-left: 175px;
+    margin-top: -19px;
+}
+
+.Spectech {
+    width: 100%;
+    border: 1px solid black;
+    float: left;
+}
+
+.head1 {
+    font-weight: bold;
+    /* margin-left: 568px; */
+    margin-top: 10px;
+}

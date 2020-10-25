@@ -1,0 +1,12 @@
+@import '../../page/variable';
+
+.span-19 {
+	h1[style='color:red'] {
+		font-size        : 14px;
+		background-color : white;
+		border-radius    : $border-radius;
+		border           : 1px solid $border-color;
+		padding          : $gutter;
+		color            : inherit !important;
+	}
+}

@@ -1,0 +1,21 @@
+@import '../variable';
+
+.wrapper {
+	display         : flex;
+	align-items     : center;
+	justify-content : center;
+
+	.span-19 > div > div > div {
+		@media screen {
+			background-color : white;
+			border-radius    : $border-radius;
+			padding          : $gutter;
+			border           : 1px solid $border-color
+		}
+	}
+
+	form {
+		margin-top : $gutter;
+		text-align : center;
+	}
+}

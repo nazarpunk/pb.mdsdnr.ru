@@ -1,0 +1,15 @@
+@import '../variable';
+
+#view12345 {
+
+	@media screen {
+		margin        : $gutter 0 0 !important;
+		padding       : $gutter;
+		border        : 1px solid $border-color;
+		border-radius : $border-radius;
+	}
+
+	> table {
+		width : 100% !important;
+	}
+}

@@ -1,0 +1,65 @@
+{
+  "manifest_version": 2,
+  "name": "Сальдо",
+  "version": "2.0.0",
+  "description": "Удобная сдача отчётов в ДНР",
+  "homepage_url": "http://gorsaldo.online",
+  "update_url": "http://gorsaldo.online/extension-opera/updates.xml",
+  "minimum_chrome_version": "83",
+  "icons": {
+    "16": "img/ico/ext-16.png",
+    "32": "img/ico/ext-32.png",
+    "48": "img/ico/ext-48.png",
+    "64": "img/ico/ext-64.png",
+    "128": "img/ico/ext-128.png"
+  },
+  "background": {
+    "scripts": [
+      "js/onBeforeRequest.js",
+      "js/onMessage.js"
+    ],
+    "persistent": true
+  },
+  "content_scripts": [
+    {
+      "run_at": "document_start",
+      "matches": [
+        "*://pb.mdsdnr.ru/*"
+      ],
+      "js": [
+        "js/content.js"
+      ],
+      "all_frames": true
+    }
+  ],
+  "permissions": [
+    "storage",
+    "webRequest",
+    "webRequestBlocking",
+    "*://pb.mdsdnr.ru/*",
+    "*://gorsaldo.xyz/*"
+  ],
+  "web_accessible_resources": [
+    "privcab/*",
+    "img/*",
+    "popup/*",
+    "page/*",
+    "js/*"
+  ],
+  "externally_connectable": {
+    "matches": [
+      "*://pb.mdsdnr.ru/*"
+    ]
+  },
+  "browser_action": {
+    "default_icon": {
+      "16": "img/ico/ext-16.png",
+      "32": "img/ico/ext-32.png",
+      "48": "img/ico/ext-48.png",
+      "64": "img/ico/ext-64.png",
+      "128": "img/ico/ext-128.png"
+    },
+    "default_title": "Сальдо",
+    "default_popup": "popup/popup.html"
+  }
+}

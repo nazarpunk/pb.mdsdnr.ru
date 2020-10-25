@@ -1,0 +1,26 @@
+@import '../variable';
+
+#mainform {
+	table {
+		width : 100%;
+	}
+}
+
+@media screen {
+	#mainform {
+		border-radius    : $border-radius;
+		background-color : white;
+		border           : 1px solid $border-color;
+		padding          : $gutter;
+		margin-top       : $gutter;
+	}
+}
+
+@media print {
+	div#mainform {
+		width : auto !important;
+		.more {
+			page-break-after : auto !important;
+		}
+	}
+}

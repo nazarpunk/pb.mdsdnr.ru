@@ -1,0 +1,64 @@
+ul.yiiPager {
+	font-size       : 14px;
+	border          : 0;
+	margin          : 0;
+	padding         : 0;
+	line-height     : 100%;
+	display         : flex;
+	flex-direction  : row;
+	align-items     : center;
+	justify-content : center;
+
+	li {
+		display : inline;
+		+ li {margin-left : 6px}
+	}
+
+	a {
+		border           : 0;
+		background-color : #a5a5a5;
+		font-weight      : bold;
+		color            : white;
+		padding          : 4px 8px;
+		text-decoration  : none;
+		display          : flex;
+
+		&:hover {
+			background-color : #909090;
+		}
+	}
+
+	.first, .previous, .next, .last {
+		a {
+			font-size : 0;
+			&:before {font-size : 14px}
+		}
+	}
+
+	.first a:before {content : '<<'}
+	.previous a:before {content : '<'}
+	.next a:before {content : '>'}
+	.last a:before {content : '>>'}
+
+	.page {
+		a {
+			font-weight : normal;
+		}
+	}
+	.selected {
+		a {
+			background-color : #2e6ab1;
+			color            : #FFFFFF;
+			font-weight      : bold;
+		}
+	}
+	.hidden {
+		opacity        : .5;
+		pointer-events : none;
+		display        : block !important;
+
+		a {
+			color : #888888;
+		}
+	}
+}

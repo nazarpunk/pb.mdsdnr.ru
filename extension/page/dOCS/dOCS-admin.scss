@@ -1,0 +1,13 @@
+@import "../../page/_variable";
+
+.content-header {
+	> h1, > h2 {
+		&:not(:first-child) {
+			font-size        : 14px;
+			background-color : white;
+			padding          : $gutter;
+			border           : 1px solid $border-color;
+			border-radius    : $border-radius;
+		}
+	}
+}

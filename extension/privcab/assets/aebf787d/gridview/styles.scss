@@ -1,0 +1,133 @@
+@import '../../../../page/variable';
+
+.grid-view-loading {
+	background : url(loading.gif) no-repeat;
+}
+
+.grid-view {
+	table.items {
+		font-size       : 14px;
+		background      : none;
+		border-collapse : collapse;
+		width           : 100%;
+		border          : 0;
+
+		thead {
+			background-color : #0077bb;
+			th {
+				border     : 0;
+				font-size  : 0.9rem;
+				color      : white;
+				text-align : center;
+				padding    : 12px 2px;
+				a {
+					color           : #EEE;
+					text-decoration : none;
+					display         : block;
+					font-weight     : normal;
+					&:hover {
+						color : #FFF;
+					}
+
+					&.asc:before,
+					&.desc:after {
+						content      : '';
+						display      : block;
+						margin       : 0 auto;
+						width        : 0;
+						height       : 0;
+						border-style : solid;
+					}
+
+					$color          : red;
+					&.asc {
+						margin-top : -10px;
+						&:before {
+							border-width : 0 10px 10px 10px;
+							border-color : transparent transparent $color transparent;
+						}
+					}
+					&.desc {
+						margin-bottom : -10px;
+						&:after {
+							border-width : 10px 10px 0 10px;
+							border-color : $color transparent transparent transparent;
+						}
+					}
+				}
+			}
+
+			tr.filters {
+				td {
+					padding : 2px 2px 4px;
+					&:first-child {padding-left : 4px}
+				}
+				input, select {
+					background-color : #006688;
+					width            : 100%;
+					border           : 0;
+					border-radius    : 4px;
+					color            : white;
+					padding          : 2px;
+				}
+			}
+		}
+		tbody {
+			tr {
+				&.selected {
+					background : #BCE774;
+					&:hover {background : #CCFF66}
+				}
+				&:hover {background : #ECFBD4}
+
+				@mixin bg($bg, $color:#333) {
+					color            : $color;
+					background-color : $bg;
+					&:hover {background-color : darken($bg, 5%)}
+					&.selected {
+						color            : white;
+						background-color : darken($bg, 15%);
+					}
+				}
+
+				&.tr_class_block {@include bg(#c7c7c7, #525252)}
+				&.tr_class_yyy {@include bg(#d6ffdd, #247b00)}
+				&.tr_class_orange {@include bg(#ffdfa0, #795a00)}
+				&.tr_class_pos2 {@include bg(#ffc3c3, #a50000)}
+
+
+				&.tr_class_not_sended_pos2 {color : rgba(255, 0, 0, 0.5)}
+				&.tr_class_posOrange {color : orange}
+				&.tr_class_pos3 {color : violet}
+				&.tr_class_not_sended_pos3 {color : rgba(238, 130, 238, 0.5)}
+				&.tr_class_not_sended_yyy {color : rgba(50, 205, 50, 0.5)}
+				&.tr_class_not_sended {color : rgb(14, 0, 0)}
+
+				&.even {background : #F8F8F8}
+				&.odd {background : #E5F1F4}
+
+				td {
+					font-size : 0.9em;
+					border    : 0;
+					padding   : 4px 0;
+
+					&:not(:empty) {
+						padding-left  : 4px;
+						padding-right : 4px;
+					}
+				}
+			}
+		}
+	}
+	.summary {
+		margin     : 0 0 5px 0;
+		text-align : right;
+	}
+	.pager {
+		margin     : 5px 0 0 0;
+		text-align : right;
+	}
+	.empty {
+		font-style : italic;
+	}
+}

@@ -1,0 +1,46 @@
+@import "../variable";
+
+#cont {
+	> h1, > div {
+		background-color : white;
+		border-radius    : $border-radius;
+		font-size        : 1rem;
+		padding          : $gutter;
+		border           : 1px solid $border-color;
+	}
+
+	> div {
+		margin-top : $gutter;
+	}
+
+	.box-header {
+		display        : flex;
+		flex-direction : row;
+		align-items    : center;
+	}
+
+	.box-title {
+		margin : 0;
+		order  : 3;
+	}
+	.box-tools {
+		margin-right : $gutter;
+	}
+
+	.timeline-header {
+		margin-top : 0;
+	}
+
+	.timeline-item {
+		.time {
+			font-size        : 12px;
+			background-color : cyan;
+			padding          : 2px 6px;
+			border-radius    : 8px;
+			margin-top       : $gutter;
+			display          : inline-block;
+		}
+	}
+
+
+}

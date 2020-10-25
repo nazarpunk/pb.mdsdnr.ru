@@ -1,0 +1,104 @@
+@import '../_variable';
+
+.main-header {
+	z-index  : 1030;
+	position : sticky;
+	top      : 0;
+
+	.navbar {
+		display             : flex;
+		flex-flow           : wrap;
+		flex-direction      : row;
+		justify-content     : flex-end;
+		width               : calc(100% - #{$sidebar-width});
+		margin-left         : $sidebar-width;
+		background-color : $navbar-bg;
+
+
+		&:before {
+			content     : attr(data-version);
+			font-family : monospace;
+			font-size   : 10px;
+			position    : absolute;
+			top         : 3px;
+			left        : $sidebar-width + 4px;
+			display     : block;
+			color       : white;
+		}
+
+		> select {
+			width               : 100%;
+
+			padding-top         : 4px;
+			padding-bottom      : 4px;
+			border-top          : 0;
+			border-right        : 0;
+			border-bottom-color : #545454;
+			border-left         : 0;
+
+			&:focus {
+				outline : none;
+			}
+		}
+	}
+
+	.dropdown-menu {
+		right          : 0;
+		left           : auto;
+		min-width      : 300px;
+		padding-top    : 0;
+		padding-bottom : 0;
+	}
+
+	a.dropdown-toggle {
+		display     : flex;
+		align-items : center;
+	}
+
+	.nav {
+		> li {
+			> a {
+				color            : white;
+				background-color : darken($navbar-bg, 5%);
+			}
+
+			&:hover, &.open {
+				> a {
+					background-color : darken($navbar-bg, 10%);
+				}
+			}
+		}
+	}
+
+	.user-menu {
+		.user-header {
+			padding-top      : 12px;
+			padding-bottom   : 12px;
+			text-align       : center;
+			color            : white;
+			background-color : darken($navbar-bg, 10%);
+
+			p {margin : 12px 0 0;}
+			.img-circle {background-color : darken($navbar-bg, 15%)}
+		}
+
+		.user-body {
+			padding : 12px;
+			> div + div {margin-top : 6px}
+		}
+
+		.user-footer {
+			padding    : 12px;
+			border-top : 1px solid #c1c1c1;
+		}
+	}
+}
+
+@media print {
+	.main-header {display : none !important;}
+}
+
+#all-sidebar-setting-btn {
+	margin-top    : 8px;
+	margin-bottom : 8px;
+}

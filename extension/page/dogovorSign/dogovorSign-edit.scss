@@ -1,0 +1,10 @@
+@import '../variable';
+
+#dogovor-sign-privcab-form {
+	background-color : white;
+	padding          : $gutter;
+	border           : 1px solid $border-color;
+	border-radius    : $border-radius;
+
+	.row.buttons {text-align : center}
+}

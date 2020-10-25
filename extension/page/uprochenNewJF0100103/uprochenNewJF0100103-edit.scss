@@ -1,0 +1,25 @@
+.row:empty {display : none}
+
+#table1 {
+
+	&, thead, tr, td, th {
+		border : 0 !important;
+	}
+
+	td, th {
+		padding : 6px 0;
+	}
+
+	td {
+		vertical-align : middle;
+
+		&:first-child {text-align : center}
+
+		label {
+			margin  : 0;
+			padding : 0 6px;
+		}
+	}
+
+	.input-group {width : 100%}
+}

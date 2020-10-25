@@ -1,0 +1,16 @@
+#mainform table {
+  width: 100%; }
+
+@media screen {
+  #mainform {
+    border-radius: 6px;
+    background-color: white;
+    border: 1px solid gray;
+    padding: 12px;
+    margin-top: 12px; } }
+
+@media print {
+  div#mainform {
+    width: auto !important; }
+    div#mainform .more {
+      page-break-after: auto !important; } }

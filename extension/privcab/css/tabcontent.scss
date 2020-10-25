@@ -1,0 +1,90 @@
+@import '../../page/_variable';
+
+.tabs {
+	padding         : 6px 0;
+	list-style-type : none;
+	text-align      : left;
+	display         : flex;
+	flex-direction  : row;
+	flex-wrap       : wrap;
+	margin          : 0 -6px;
+	user-select     : none;
+
+	li {
+		display : flex;
+		margin  : 6px;
+
+		a {
+			font-size       : 12px;
+			text-decoration : none;
+			position        : relative;
+			padding         : 7px 16px;
+			color           : #000;
+			background      : #F0F0F0;
+			border-radius   : $border-radius;
+			outline         : none;
+			white-space     : nowrap;
+
+			&:hover, &:focus {
+				background : #cdcdcd;
+			}
+		}
+	}
+	.selected {
+		a {
+			&, &:hover, &:focus {
+				color      : white;
+				background : #777777;
+			}
+		}
+	}
+
+	@media print {display : none}
+}
+.tabcontents {
+	> div {
+		width : 100% !important;
+		@media screen {
+			border           : 1px solid $border-color !important;
+			padding          : $gutter !important;
+			background-color : #FFF;
+			border-radius    : $border-radius;
+			overflow-x       : auto;
+			margin-bottom    : $gutter;
+		}
+		@media print {
+			page-break-after : always;
+		}
+	}
+
+	+ .box-footer {
+		padding    : $gutter;
+		text-align : center;
+	}
+}
+.menu {
+	display : block;
+	&:after {
+		content    : "\0020";
+		display    : block;
+		height     : 0;
+		clear      : both;
+		visibility : hidden;
+		overflow   : hidden;
+	}
+	li {
+		float   : left;
+		display : inline;
+	}
+}
+
+.id-label {width : 4%}
+.num-label {width : 6%}
+.date-label {width : 9%}
+.ext-date-label {width : 13%}
+.min-label {width : 1%}
+.menu-button {
+	background-repeat   : no-repeat;
+	background-position : 5px center;
+	padding             : 10px 10px 10px 35px;
+}

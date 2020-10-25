@@ -1,0 +1,115 @@
+@media print {
+	.unprintable {display : none}
+}
+
+.tabcontents {
+
+	* {
+		height : auto !important;
+	}
+
+	table {
+		th, td {
+			width : auto !important;
+			@media print {
+				padding : 0 0 0 4px !important;
+			}
+		}
+	}
+
+	#view1 {
+		> :nth-child(3) {
+			margin-top : 0 !important;
+			clear      : both;
+		}
+	}
+
+
+	.t1 {
+		width : 100%;
+	}
+
+	.r7, .t2 {
+		width      : 100%;
+		margin-top : 6px;
+	}
+
+	.r7_2, .r7_4 {
+		float          : none;
+		clear          : both;
+		display        : flex;
+		flex-direction : row;
+		flex-wrap      : nowrap;
+		margin         : 0 !important;
+
+		> div {
+			margin : 0 !important;
+			float  : none !important;
+
+			&:nth-child(1) {
+				width : 30% !important;
+			}
+			&:nth-child(2) {
+				width           : 70% !important;
+				display         : flex;
+				flex-direction  : column;
+				justify-content : flex-end;
+				> div {
+					margin : 0 !important;
+				}
+			}
+		}
+	}
+
+	.r7_2_2 {align-items : center}
+
+	@media print {
+		.r7_2_2_2 {display : none}
+	}
+
+	.r8 {
+		margin-top  : 6px;
+		width       : 100%;
+		white-space : nowrap;
+	}
+
+	.r8_1 {
+		width          : 100%;
+		float          : none;
+		position       : relative;
+		display        : flex;
+		flex-direction : column;
+	}
+
+	.r8_1_1, .r8_2 {
+		display         : flex;
+		flex-direction  : row;
+		float           : none;
+		width           : 75%;
+		justify-content : space-between;
+		margin-top      : 8px;
+		* {width : auto !important}
+
+		> div {
+			width          : auto;
+			float          : none;
+			display        : flex;
+			flex-direction : column;
+			margin         : 0;
+			&:nth-child(2) {
+				justify-content : flex-end;
+			}
+		}
+	}
+
+	.r8_3 {
+		position : absolute;
+		margin   : 0;
+		right    : 0;
+		top      : 0;
+		width    : auto;
+		padding  : 30px;
+	}
+
+	#row17 {clear : both}
+}

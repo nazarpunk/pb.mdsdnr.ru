@@ -1,0 +1,29 @@
+@import '../../page/variable';
+
+.span-19 {
+	hr {visibility : hidden}
+
+	> div {
+		display        : flex;
+		flex-direction : column;
+
+		> div {
+			background-color : white;
+			margin-bottom    : $gutter;
+			@media screen {
+				overflow-y    : auto;
+				padding       : $gutter;
+				border        : 1px solid $border-color;
+				border-radius : $border-radius;
+			}
+		}
+	}
+
+	form {
+		margin-top : $gutter;
+	}
+
+	@media print {
+		button {display : none}
+	}
+}

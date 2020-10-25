@@ -1,0 +1,57 @@
+div#view1 {
+  width: 100%; }
+  div#view1 td {
+    padding: 0 !important; }
+
+table.t1 {
+  width: 100% !important;
+  margin: 0 !important; }
+
+div#row9 {
+  margin: 0;
+  height: auto; }
+
+div#row13 {
+  height: auto;
+  display: flex;
+  flex-direction: row; }
+
+div#row13col1 {
+  width: auto;
+  height: auto; }
+  div#row13col1 #tabl1 {
+    width: auto; }
+
+div#row13col2 {
+  margin: 15px 0 0;
+  height: auto; }
+  div#row13col2 > div {
+    padding-left: 8px; }
+
+table#tabl2 {
+  margin: 0; }
+
+table#row15 {
+  margin: 0; }
+
+div#row15col1 {
+  margin: 0; }
+
+div#row18 {
+  height: auto;
+  display: flex;
+  justify-content: flex-end; }
+  div#row18 #row18col1 {
+    margin: 0; }
+
+@media screen {
+  div#view1 {
+    border-radius: 6px;
+    background-color: white;
+    border: 1px solid gray;
+    padding: 12px;
+    margin: 12px 0 0; } }
+
+@media print {
+  h1[style] {
+    display: none; } }
