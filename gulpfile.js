@@ -2,41 +2,39 @@
 
 const {watch, task, src, dest} = require('gulp'),
       {yellow, gray}           = require(`colors/safe`),
-      {log}                    = require(`gulp-util`),
       sourcemaps               = require(`gulp-sourcemaps`),
       ts                       = require(`gulp-typescript`),
       sass                     = require(`gulp-sass`),
-      error                    = error => {log(yellow(error.toString()))},
-      watch_scss               = [`**/*.scss`, `!**/_*.scss`, `!node_modules/**/*`],
-      task_scss                = src => src.pipe(sourcemaps.init())
-                                           .pipe(sass()).on(`error`, error)
+      error                    = error => {console.log(yellow(error.toString()))},
+      scss_glob                = [`**/*.scss`, `!**/_*.scss`, `!node_modules/**/*`],
+      scss_task                = src => src.pipe(sourcemaps.init())
+                                           .pipe(sass().on('error', sass.logError))
                                            .pipe(sourcemaps.write())
                                            .pipe(dest('.')),
-      tsconfig                 = JSON.parse(require('fs').readFileSync(`tsconfig.json`).toString()),
-      watch_ts                 = [`**/*.ts`, `!**/*.d.ts`, `!node_modules/**/*`],
-      task_ts                  = src => src.pipe(sourcemaps.init())
-                                           .pipe(ts(tsconfig.compilerOptions)).on(`error`, error)
+      ts_glob                  = [`**/*.ts`, `!**/*.d.ts`, `!node_modules/**/*`],
+      ts_task                  = src => src.pipe(sourcemaps.init())
+                                           .pipe(ts.createProject('tsconfig.json')()).on(`error`, error)
                                            .pipe(sourcemaps.write())
                                            .pipe(dest(`.`));
 
 task(`watch`, cb => {
 	cb();
 
-	watch(watch_scss).on(`change`, path => {
-		log(gray(path));
-		task_scss(src(path));
+	watch(scss_glob).on(`change`, path => {
+		console.log(gray(path));
+		scss_task(src(path));
 	});
-	watch(watch_ts).on(`change`, path => {
-		log(gray(path));
-		task_ts(src(path));
+	watch(ts_glob).on(`change`, path => {
+		console.log(gray(path));
+		ts_task(src(path));
 	});
 });
 
 task(`scss`, cb => {
 	cb();
-	task_scss(src(watch_scss));
+	scss_task(src(scss_glob));
 });
 task(`ts`, cb => {
 	cb();
-	task_ts(src(watch_ts));
+	ts_task(src(ts_glob));
 });

@@ -2,7 +2,6 @@
   <library name="ts-external-references" type="javaScript">
     <properties>
       <sourceFilesUrls>
-        <item url="file://$PROJECT_DIR$/extension/js/background/onMessage.d.ts" />
         <item url="file://$PROJECT_DIR$/extension/page/page.d.ts" />
       </sourceFilesUrls>
     </properties>
@@ -10,6 +9,7 @@
       <root url="file://$PROJECT_DIR$/extension/js/onMessage.d.ts" />
       <root url="file://$PROJECT_DIR$/extension/page/page.d.ts" />
     </CLASSES>
+    <JAVADOC />
     <SOURCES />
   </library>
 </component>
