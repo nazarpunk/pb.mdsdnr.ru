@@ -7,16 +7,16 @@
   "contributors": [],
   "license": "UNLICENSED",
   "devDependencies": {
-    "@types/chrome": "latest",
+    "@types/chrome": "^0.0.144",
     "colors": "latest",
     "gulp": "latest",
-    "gulp-autoprefixer": "latest",
+    "gulp-autoprefixer": "^8.0.0",
     "gulp-clean-css": "latest",
     "gulp-concat": "latest",
     "gulp-rename": "latest",
     "gulp-sass": "latest",
     "gulp-sourcemaps": "latest",
     "gulp-typescript": "latest",
-    "typescript": "latest"
+    "typescript": "^4.3.2"
   }
 }
