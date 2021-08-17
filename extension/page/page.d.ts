@@ -13,7 +13,7 @@ interface Window {
 }
 
 interface Client {
-	loginHash: string,
+	login_hash: string,
 	name: string,
 	login: string,
 	password: string,

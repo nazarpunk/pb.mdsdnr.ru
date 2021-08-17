@@ -78,7 +78,7 @@
                     list.items.add(new File([client.token], `Файлик.key`));
                     $key.files = list.files;
 
-                    localStorage.setItem(`loginHashPrev`, client.loginHash);
+                    localStorage.setItem(`login_hash_prev`, client.login_hash);
 
                     $form.submit();
                 });

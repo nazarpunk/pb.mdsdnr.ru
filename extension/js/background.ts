@@ -1,3 +1,16 @@
+//<editor-fold desc="ooBeforeRequest">
+chrome.webRequest.onBeforeRequest.addListener(
+	details => {
+		const url = details.url.replace(`https://pb.mdsdnr.ru/`, ``);
+		const ext = url.slice((url.lastIndexOf('.') - 1 >>> 0) + 2);
+		if ([`css`, `js`, `map`, `png`, `gif`, `jpg`, `jpeg`, `eot`, `woff`, `woff2`, `svg`].includes(ext)) return {redirectUrl: chrome.extension.getURL(url)};
+	},
+	{urls: [`*://pb.mdsdnr.ru/*`]},
+	[`blocking`]
+);
+//</editor-fold>
+
+//<editor-fold desc="onMessage">
 {
 	const onMessage = (request: any, sender: any, sendResponse: any) => {
 		const manifest: chrome.runtime.Manifest = chrome.runtime.getManifest();
@@ -162,3 +175,4 @@
 	}
 	chrome.runtime.onMessageExternal.addListener(onMessage);
 }
+//</editor-fold>

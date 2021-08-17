@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
   "name": "Сальдо",
-  "version": "2.0.4",
+  "version": "2.0.5",
   "description": "Удобная сдача отчётов в ДНР",
   "homepage_url": "http://gorsaldo.online",
   "update_url": "https://raw.githubusercontent.com/nazarpunk/pb.mdsdnr.ru/master/updates.xml",
@@ -15,8 +15,7 @@
   },
   "background": {
     "scripts": [
-      "js/onBeforeRequest.js",
-      "js/onMessage.js"
+      "js/background.js"
     ],
     "persistent": true
   },

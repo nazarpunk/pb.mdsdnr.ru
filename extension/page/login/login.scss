@@ -5,18 +5,27 @@
 
 	h3 {margin-top : 0}
 }
+
 .login-box {
 	width  : 360px;
 	margin : auto;
 }
+
+.login-box-select-wrap {
+	display               : grid;
+	margin-bottom         : 1rem;
+	grid-template-columns : 1fr auto;
+	grid-gap              : 1rem;
+}
+
 .login-box-body {
-	background      : rgba(255, 255, 255, 0.4);
-	backdrop-filter : blur(4px);
 	padding         : $gutter;
-	border-top      : 0;
 	color           : #666;
+	border-top      : 0;
 	border-radius   : 9px !important;
+	background      : rgba(255, 255, 255, 0.4);
 	box-shadow      : 0 0 6px black;
+	backdrop-filter : blur(4px);
 
 	.row {
 		&.save {
@@ -29,12 +38,12 @@
 		}
 
 		&.submit {
-			background                 : rgba(0, 0, 0, 0.2);
 			margin                     : $gutter ($gutter * -1) ($gutter * -1);
 			padding                    : $gutter;
 			border-top                 : 1px solid rgb(110, 110, 110);
-			border-bottom-left-radius  : 9px;
 			border-bottom-right-radius : 9px;
+			border-bottom-left-radius  : 9px;
+			background                 : rgba(0, 0, 0, 0.2);
 		}
 	}
 
@@ -46,9 +55,9 @@
 
 	[type=file] {
 		width         : 100%;
+		cursor        : pointer;
 		border        : 1px solid #ccc;
 		border-radius : 4px;
-		cursor        : pointer;
 		background    : white;
 
 		&:focus {
@@ -56,34 +65,40 @@
 			box-shadow   : inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6);
 		}
 	}
+	//noinspection DuplicatedCode
 	::-webkit-file-upload-button {
-		border           : 0;
 		font-size        : 12px;
-		padding          : 8px 6px;
-		border-radius    : 0;
 		display          : inline-block;
+		padding          : 8px 6px;
+		cursor           : pointer;
+		transition       : all 0.2s;
+		text-align       : center;
 		text-decoration  : none;
 		color            : #2f2f2f;
+		border           : 0;
+		border-radius    : 0;
 		background-color : #ccc;
-		text-align       : center;
-		transition       : all 0.2s;
-		cursor           : pointer;
 
 		&:hover {background-color : darken(#ccc, 5%)}
 	}
 
 	// <editor-fold desc="Switch">
 	.switch-wrap {
+		font-weight : normal;
+		font-style  : italic;
 		display     : flex;
 		align-items : center;
 		margin      : 8px 0;
-		user-select : none;
 		cursor      : pointer;
-		font-style  : italic;
-		font-weight : normal;
+		user-select : none;
 	}
 
+	//noinspection DuplicatedCode
 	.switch {
+		position     : relative;
+		width        : 60px;
+		height       : 32px;
+		margin-right : 8px;
 		--line       : #E8EBFB;
 		--dot        : #275EFE;
 		--circle     : #D3D4EC;
@@ -91,20 +106,16 @@
 		--duration   : .3s;
 		--text       : #9EA0BE;
 		--shadow     : 0 1px 4px rgba(0, 0, 0, 0.8);
-		position     : relative;
-		width        : 60px;
-		height       : 32px;
-		margin-right : 8px;
 
 		&:before {
-			content       : '';
+			position      : absolute;
+			top           : 0;
+			left          : 0;
 			width         : 60px;
 			height        : 32px;
+			content       : '';
 			border-radius : 16px;
 			background    : var(--background);
-			position      : absolute;
-			left          : 0;
-			top           : 0;
 			box-shadow    : var(--shadow);
 		}
 		input {
@@ -113,21 +124,21 @@
 				position : relative;
 				&:before,
 				&:after {
-					--s        : 1;
-					content    : '';
 					position   : absolute;
-					height     : 4px;
 					top        : 14px;
 					width      : 24px;
-					background : var(--line);
-					transform  : scaleX(var(--s));
+					height     : 4px;
+					content    : '';
 					transition : transform var(--duration) ease;
+					transform  : scaleX(var(--s));
+					background : var(--line);
+					--s        : 1;
 				}
 				&:before {
-					--s              : 0;
 					left             : 4px;
 					transform-origin : 0 50%;
 					border-radius    : 2px 0 0 2px;
+					--s              : 0;
 				}
 				&:after {
 					left             : 32px;
@@ -135,23 +146,23 @@
 					border-radius    : 0 2px 2px 0;
 				}
 				span {
-					padding-left : 60px;
 					line-height  : 28px;
+					padding-left : 60px;
 					color        : var(--text);
 					&:before {
+						position      : absolute;
+						top           : 4px;
+						left          : 4px;
+						width         : 24px;
+						height        : 24px;
+						content       : '';
+						transition    : box-shadow var(--duration) ease, transform var(--duration) ease;
+						transform     : translateX(var(--x));
+						border-radius : 50%;
+						box-shadow    : inset 0 0 0 var(--s) var(--b);
 						--x           : 0;
 						--b           : var(--circle);
 						--s           : 4px;
-						content       : '';
-						position      : absolute;
-						left          : 4px;
-						top           : 4px;
-						width         : 24px;
-						height        : 24px;
-						border-radius : 50%;
-						box-shadow    : inset 0 0 0 var(--s) var(--b);
-						transform     : translateX(var(--x));
-						transition    : box-shadow var(--duration) ease, transform var(--duration) ease;
 					}
 					&:not(:empty) {
 						padding-left : 68px;
@@ -175,14 +186,82 @@
 	}
 	// </editor-fold>
 
-
 }
 .login-box-msg {
 	margin     : 0;
-	text-align : center;
 	padding    : 0 20px 20px 20px;
+	text-align : center;
 }
 
 #login-form {
 	text-align : left;
+}
+
+
+$opacity-transition : opacity 600ms ease-in-out;
+
+#clients {
+	visibility : hidden;
+	transition : $opacity-transition;
+	opacity    : 0;
+
+	&:target {
+		visibility : visible;
+		opacity    : 1;
+
+		.my-modal-body {
+			transform : translateY(1);
+			opacity   : 1;
+		}
+	}
+
+	.my-modal-body {
+		z-index    : 1;
+		width      : 100%;
+		max-width  : 500px;
+		transition : $opacity-transition;
+		transform  : translateY(-100px);
+		opacity    : 0;
+	}
+}
+.my-modal-wrapper {
+	position        : fixed;
+	z-index         : 1000;
+	top             : 0;
+	right           : 0;
+	bottom          : 0;
+	left            : 0;
+	display         : flex;
+	align-items     : center;
+	justify-content : center;
+	background      : rgba(0, 0, 0, 0.7);
+}
+
+.my-modal-outside {
+	position : fixed;
+	top      : 0;
+	right    : 0;
+	bottom   : 0;
+	left     : 0;
+	cursor   : default;
+}
+
+.my-modal-body {
+	display                   : flex;
+	flex-direction            : column;
+	width                     : 100%;
+	max-width                 : 400px;
+	margin                    : 40px;
+	padding                   : 32px;
+	border-top-right-radius   : 16px;
+	border-bottom-left-radius : 16px;
+	background                : #fff linear-gradient(
+					48deg, #fff 0%, #e5efe9 100%);
+	box-shadow                : -20px 20px 35px 1px rgb(10 49 86 / 18%);
+
+	.btn-danger {
+		position : absolute;
+		top      : 1rem;
+		right    : 1rem;
+	}
 }
