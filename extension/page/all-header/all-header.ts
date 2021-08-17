@@ -1,4 +1,6 @@
 /// <reference path="../page.d.ts" />
+// noinspection CssUnusedSymbol
+
 (($header: HTMLElement) => {
     if ($header === null) return;
     if (!window.isClientLogged) return $header.remove();

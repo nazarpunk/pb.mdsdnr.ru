@@ -14,7 +14,27 @@ chrome.webRequest.onBeforeRequest.addListener(
 {
 	const onMessage = (request: any, sender: any, sendResponse: any) => {
 		const manifest: chrome.runtime.Manifest = chrome.runtime.getManifest();
-		
+
+		// <editor-fold desc="userClientRemove">
+		if (request.hasOwnProperty(`userClientRemove`)) {
+			chrome.storage.local.get(['token'], result => {
+				if (!result.hasOwnProperty(`token`)) return;
+				const body = new FormData();
+				body.set('hash', request.userClientRemove);
+				body.set('token', result.token);
+
+				fetch(`${manifest.homepage_url}/mindnr.php?user|client_remove`, {
+					method: `post`,
+					body  : body
+				})
+					.then(r => r.json())
+					.then(data => sendResponse(data))
+					.catch(e => sendResponse({error: e.message}));
+			});
+			return true;
+		}
+		// </editor-fold>
+
 		// <editor-fold desc="setClientSidebar">
 		if (request.hasOwnProperty(`setClientSidebar`)) {
 			chrome.storage.local.get(['token'], result => {
@@ -34,7 +54,7 @@ chrome.webRequest.onBeforeRequest.addListener(
 			return true;
 		}
 		// </editor-fold>
-		
+
 		// <editor-fold desc="getClientSidebar">
 		if (request.hasOwnProperty(`getClientSidebar`)) {
 			chrome.storage.local.get([`ID`, `clients`], result => {
@@ -61,21 +81,21 @@ chrome.webRequest.onBeforeRequest.addListener(
 			return true;
 		}
 		// </editor-fold>
-		
+
 		// <editor-fold desc="getVersion">
 		if (request.hasOwnProperty(`getManifest`)) {
 			sendResponse(manifest);
 			return true;
 		}
 		// </editor-fold>
-		
+
 		// <editor-fold desc="getClients">
 		if (request.hasOwnProperty(`getClients`)) {
 			chrome.storage.local.get(['ID', 'clients', 'token'], result => sendResponse(result));
 			return true;
 		}
 		// </editor-fold>
-		
+
 		// <editor-fold desc="updateData">
 		if (request.hasOwnProperty(`updateData`)) {
 			chrome.storage.local.get(['token'], result => {
@@ -93,7 +113,7 @@ chrome.webRequest.onBeforeRequest.addListener(
 			});
 		}
 		// </editor-fold>
-		
+
 		// <editor-fold desc="getClientSignature">
 		if (request.hasOwnProperty(`getClientSignature`)) {
 			let out: {
@@ -111,7 +131,7 @@ chrome.webRequest.onBeforeRequest.addListener(
 			return true;
 		}
 		// </editor-fold>
-		
+
 		// <editor-fold desc="saveClient">
 		if (request.hasOwnProperty(`saveClient`)) {
 			fetch(`${manifest.homepage_url}/mindnr.php?user|saveClient`, {
@@ -128,7 +148,7 @@ chrome.webRequest.onBeforeRequest.addListener(
 			return true;
 		}
 		// </editor-fold>
-		
+
 		// <editor-fold desc="saveSignature">
 		if (request.hasOwnProperty(`saveSignature`)) {
 			chrome.storage.local.get(['token'], result => {
@@ -149,7 +169,7 @@ chrome.webRequest.onBeforeRequest.addListener(
 			});
 		}
 		// </editor-fold>
-		
+
 		// <editor-fold desc="updateClientName">
 		if (request.hasOwnProperty(`updateClientName`)) {
 			chrome.storage.local.get(['token'], result => {
@@ -169,10 +189,10 @@ chrome.webRequest.onBeforeRequest.addListener(
 			});
 		}
 		// </editor-fold>
-		
+
 		sendResponse({});
 		return true;
-	}
+	};
 	chrome.runtime.onMessageExternal.addListener(onMessage);
 }
 //</editor-fold>

@@ -7,8 +7,11 @@
 }
 
 .login-box {
-	width  : 360px;
-	margin : auto;
+	display        : flex;
+	flex-direction : column;
+	width          : 360px;
+	margin         : auto;
+	padding        : 2rem 0;
 }
 
 .login-box-select-wrap {
@@ -198,70 +201,176 @@
 }
 
 
-$opacity-transition : opacity 600ms ease-in-out;
-
 #clients {
-	visibility : hidden;
-	transition : $opacity-transition;
-	opacity    : 0;
+	transition     : opacity 600ms ease-in-out;
+	pointer-events : none;
+	opacity        : 0;
 
 	&:target {
-		visibility : visible;
-		opacity    : 1;
+		pointer-events : auto;
+		opacity        : 1;
 
-		.my-modal-body {
-			transform : translateY(1);
-			opacity   : 1;
+		#clients-content {
+			opacity : 1;
 		}
 	}
 
-	.my-modal-body {
-		z-index    : 1;
-		width      : 100%;
-		max-width  : 500px;
-		transition : $opacity-transition;
-		transform  : translateY(-100px);
-		opacity    : 0;
+	.btn .fa {
+		pointer-events : none;
 	}
 }
 .my-modal-wrapper {
-	position        : fixed;
-	z-index         : 1000;
-	top             : 0;
-	right           : 0;
-	bottom          : 0;
-	left            : 0;
-	display         : flex;
-	align-items     : center;
-	justify-content : center;
-	background      : rgba(0, 0, 0, 0.7);
+	position   : fixed;
+	z-index    : 1000;
+	top        : 0;
+	right      : 0;
+	bottom     : 0;
+	left       : 0;
+	display    : flex;
+	overflow-y : scroll;
+	padding    : 1rem;
+	background : rgba(0, 0, 0, 0.7);
+
+	> .btn-danger {
+		position : fixed;
+		z-index  : 300;
+		top      : 12px;
+		right    : 12px;
+	}
 }
 
 .my-modal-outside {
 	position : fixed;
 	top      : 0;
-	right    : 0;
+	right    : 16px;
 	bottom   : 0;
 	left     : 0;
 	cursor   : default;
 }
 
-.my-modal-body {
-	display                   : flex;
-	flex-direction            : column;
-	width                     : 100%;
-	max-width                 : 400px;
-	margin                    : 40px;
-	padding                   : 32px;
-	border-top-right-radius   : 16px;
-	border-bottom-left-radius : 16px;
-	background                : #fff linear-gradient(
-					48deg, #fff 0%, #e5efe9 100%);
-	box-shadow                : -20px 20px 35px 1px rgb(10 49 86 / 18%);
+#clients-content {
+	z-index       : 1;
+	margin        : auto;
+	padding       : 1rem;
+	transition    : opacity 600ms ease-in-out;
+	opacity       : 0;
+	border-radius : 8px;
+}
 
-	.btn-danger {
+.client-item {
+	display               : grid;
+	overflow              : hidden;
+	align-items           : center;
+	margin-bottom         : 1rem;
+	transition            : margin-bottom 1200ms, max-height 600ms;
+	grid-template-columns : 1fr auto;
+	grid-gap              : 1rem;
+
+	&.removing {
+		max-height    : 0 !important;
+		margin-bottom : 0;
+
+		&, & * {
+			pointer-events : none !important;
+		}
+	}
+
+	&.removed {
+		.client-remove {
+			pointer-events : auto;
+			opacity        : 1;
+		}
+	}
+}
+
+.client-name {
+	padding       : 1rem;
+	border-radius : 6px;
+	background    : rgba(255, 255, 255);
+	box-shadow    : 0 0 6px black;
+}
+
+.client-action {
+	position : relative;
+}
+
+.client-remove {
+	position       : absolute;
+	top            : 0;
+	right          : 0;
+	display        : grid;
+	transition     : opacity 200ms;
+	white-space    : nowrap;
+	pointer-events : none;
+	opacity        : 0;
+	grid-auto-flow : column;
+	grid-gap       : 2rem;
+}
+
+
+$prime  : #337ab7;
+$second : #ffffff;
+#pay-button-svg {
+	position : absolute;
+	top      : -4000px;
+	left     : -4000px;
+}
+
+#pay-button {
+	font-size        : 1.2rem;
+	position         : relative;
+	margin           : 0 auto;
+	padding          : .5rem 1rem;
+	color            : $second;
+	border           : none;
+	background-color : $prime;
+	filter           : url('#gooey');
+
+	&:focus {
+		outline : none;
+	}
+
+	.bubbles {
 		position : absolute;
-		top      : 1rem;
-		right    : 1rem;
+		top      : 0;
+		right    : 0;
+		bottom   : 0;
+		left     : 0;
+
+		.bubble {
+			position         : absolute;
+			z-index          : -1;
+			top              : 0;
+			left             : 0;
+			display          : block;
+			border-radius    : 100%;
+			background-color : $prime;
+
+			@for $bubble from 1 through 10 {
+				&:nth-child(#{$bubble}) {
+					$size           : 25px;
+					left            : (random(90) + 10)+px;
+					width           : $size;
+					height          : $size;
+					animation       : move-#{$bubble} #{3 + $bubble*0.02}s infinite;
+					animation-delay : #{$bubble*0.2}s;
+				}
+			}
+		}
+	}
+}
+
+@for $bubble from 1 through 10 {
+	@keyframes move-#{$bubble}{
+		0% {
+			transform : translate(0, 0);
+		}
+		99% {
+			transform : translate(0, -(random(80) + 50)+px);
+		}
+		100% {
+			transform : translate(0, 0);
+			opacity   : 0;
+		}
 	}
 }
