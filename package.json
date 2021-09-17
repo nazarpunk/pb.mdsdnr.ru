@@ -7,7 +7,7 @@
   "contributors": [],
   "license": "UNLICENSED",
   "devDependencies": {
-    "@types/chrome": "^0.0.154",
+    "@types/chrome": "^0.0.157",
     "colors": "latest",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^8.0.0",
@@ -17,7 +17,7 @@
     "gulp-sass": "latest",
     "gulp-sourcemaps": "latest",
     "gulp-typescript": "^6.0.0-alpha.1",
-    "sass": "^1.37.5",
-    "typescript": "latest"
+    "sass": "^1.41.1",
+    "typescript": "^4.4.3"
   }
 }
